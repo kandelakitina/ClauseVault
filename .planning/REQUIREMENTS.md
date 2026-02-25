@@ -93,43 +93,43 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| AUTH-01 | Pending | Pending |
-| AUTH-02 | Pending | Pending |
-| AUTH-03 | Pending | Pending |
-| CLAU-01 | Pending | Pending |
-| CLAU-02 | Pending | Pending |
-| CLAU-03 | Pending | Pending |
-| CLAU-04 | Pending | Pending |
-| CLAU-05 | Pending | Pending |
-| CLAU-06 | Pending | Pending |
-| CLAU-07 | Pending | Pending |
-| BILD-01 | Pending | Pending |
-| BILD-02 | Pending | Pending |
-| BILD-03 | Pending | Pending |
-| BILD-04 | Pending | Pending |
-| BILD-05 | Pending | Pending |
-| BILD-06 | Pending | Pending |
-| DATA-01 | Pending | Pending |
-| DATA-02 | Pending | Pending |
-| DATA-03 | Pending | Pending |
-| DATA-04 | Pending | Pending |
-| API-01 | Pending | Pending |
-| API-02 | Pending | Pending |
-| API-03 | Pending | Pending |
-| API-04 | Pending | Pending |
-| DB-01 | Pending | Pending |
-| DB-02 | Pending | Pending |
-| DB-03 | Pending | Pending |
-| DB-04 | Pending | Pending |
-| UI-01 | Pending | Pending |
-| UI-02 | Pending | Pending |
-| UI-03 | Pending | Pending |
-| UI-04 | Pending | Pending |
+| AUTH-01 | Phase 1 | Pending |
+| AUTH-02 | Phase 1 | Pending |
+| AUTH-03 | Phase 1 | Pending |
+| CLAU-01 | Phase 2 | Pending |
+| CLAU-02 | Phase 2 | Pending |
+| CLAU-03 | Phase 2 | Pending |
+| CLAU-04 | Phase 2 | Pending |
+| CLAU-05 | Phase 4 | Pending |
+| CLAU-06 | Phase 4 | Pending |
+| CLAU-07 | Phase 4 | Pending |
+| BILD-01 | Phase 3 | Pending |
+| BILD-02 | Phase 3 | Pending |
+| BILD-03 | Phase 3 | Pending |
+| BILD-04 | Phase 3 | Pending |
+| BILD-05 | Phase 4 | Pending |
+| BILD-06 | Phase 3 | Pending |
+| DATA-01 | Phase 3 | Pending |
+| DATA-02 | Phase 3 | Pending |
+| DATA-03 | Phase 3 | Pending |
+| DATA-04 | Phase 3 | Pending |
+| API-01 | Phase 2 | Pending |
+| API-02 | Phase 3 | Pending |
+| API-03 | Phase 1 | Pending |
+| API-04 | Phase 4 | Pending |
+| DB-01 | Phase 1 | Pending |
+| DB-02 | Phase 2 | Pending |
+| DB-03 | Phase 3 | Pending |
+| DB-04 | Phase 4 | Pending |
+| UI-01 | Phase 1 | Pending |
+| UI-02 | Phase 1 | Pending |
+| UI-03 | Phase 3 | Pending |
+| UI-04 | Phase 2 | Pending |
 
 **Coverage:**
 - v1 requirements: 29 total
-- Mapped to phases: 0
-- Unmapped: 29 ⚠️
+- Mapped to phases: 29
+- Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-02-25*

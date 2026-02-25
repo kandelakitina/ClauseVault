@@ -2,7 +2,7 @@
 
 ## What This Is
 
-A web service for managing commercial contract clauses with a drag-and-drop contract builder. Users can browse, filter, and assemble contracts from a library of pre-vetted clauses. The service supports bilingual clauses (English and Russian) for international contracts.
+A web service for managing commercial contract clauses with a drag-and-drop contract builder. Users can browse, filter, and assemble contracts from a library of pre-vetted clauses. The service supports bilingual clauses (English and Russian) for international contracts. Built with Svelte frontend, Deno backend, and MongoDB database, with OpenAPI documentation.
 
 ## Core Value
 
