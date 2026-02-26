@@ -20,6 +20,8 @@ This roadmap breaks the ClauseVault project into 4 phases, focusing on deliverin
 - API-03 (API endpoints for user authentication)
 - UI-01, UI-02 (Svelte frontend with responsive design)
 
+**Plans:** 2 plans
+
 **Success Criteria:**
 - Users can register and create accounts
 - Users can securely log in and maintain sessions
@@ -33,6 +35,10 @@ This roadmap breaks the ClauseVault project into 4 phases, focusing on deliverin
 3. Create database schema for user accounts
 4. Build basic Svelte UI framework
 5. Implement responsive design patterns
+
+**Plans:**
+- [ ] 01-01-PLAN.md — Backend authentication API with Oak framework
+- [ ] 01-02-PLAN.md — Frontend authentication UI with Svelte and responsive design
 
 ## Phase 2: Clause Management System
 
