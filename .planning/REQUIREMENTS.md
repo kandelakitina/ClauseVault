@@ -9,9 +9,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Authentication
 
-- [ ] **AUTH-01**: User can create account with email and password
-- [ ] **AUTH-02**: User can log in and stay logged in across sessions
-- [ ] **AUTH-03**: User can log out from any page
+- [x] **AUTH-01**: User can create account with email and password
+- [x] **AUTH-02**: User can log in and stay logged in across sessions
+- [x] **AUTH-03**: User can log out from any page
 
 ### Clauses
 
@@ -43,20 +43,20 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [ ] **API-01**: API provides endpoints for clause CRUD operations
 - [ ] **API-02**: API provides endpoints for contract CRUD operations
-- [ ] **API-03**: API provides endpoints for user authentication
+- [x] **API-03**: API provides endpoints for user authentication
 - [ ] **API-04**: API includes OpenAPI documentation
 
 ### Database
 
-- [ ] **DB-01**: Database stores user accounts securely
+- [x] **DB-01**: Database stores user accounts securely
 - [ ] **DB-02**: Database stores clauses with English and Russian texts
 - [ ] **DB-03**: Database stores user-created contracts
 - [ ] **DB-04**: Database tracks clause usage metrics
 
 ### Frontend
 
-- [ ] **UI-01**: Frontend built with Svelte framework
-- [ ] **UI-02**: Responsive design works on desktop and mobile
+- [x] **UI-01**: Frontend built with Svelte framework
+- [x] **UI-02**: Responsive design works on desktop and mobile
 - [ ] **UI-03**: Intuitive drag-and-drop interface for contract building
 - [ ] **UI-04**: Clear navigation between clause browsing and contract building
 
@@ -93,9 +93,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| AUTH-01 | Phase 1 | Pending |
-| AUTH-02 | Phase 1 | Pending |
-| AUTH-03 | Phase 1 | Pending |
+| AUTH-01 | Phase 1 | Complete |
+| AUTH-02 | Phase 1 | Complete |
+| AUTH-03 | Phase 1 | Complete |
 | CLAU-01 | Phase 2 | Pending |
 | CLAU-02 | Phase 2 | Pending |
 | CLAU-03 | Phase 2 | Pending |
@@ -115,14 +115,14 @@ Which phases cover which requirements. Updated during roadmap creation.
 | DATA-04 | Phase 3 | Pending |
 | API-01 | Phase 2 | Pending |
 | API-02 | Phase 3 | Pending |
-| API-03 | Phase 1 | Pending |
+| API-03 | Phase 1 | Complete |
 | API-04 | Phase 4 | Pending |
-| DB-01 | Phase 1 | Pending |
+| DB-01 | Phase 1 | Complete |
 | DB-02 | Phase 2 | Pending |
 | DB-03 | Phase 3 | Pending |
 | DB-04 | Phase 4 | Pending |
-| UI-01 | Phase 1 | Pending |
-| UI-02 | Phase 1 | Pending |
+| UI-01 | Phase 1 | Complete |
+| UI-02 | Phase 1 | Complete |
 | UI-03 | Phase 3 | Pending |
 | UI-04 | Phase 2 | Pending |
 
