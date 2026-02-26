@@ -1,15 +1,22 @@
 import { writable } from 'svelte/store';
 
 // Define the user type
-interface User {
+export interface User {
   id: string;
   email: string;
 }
 
+// Define the authentication state interface
+interface AuthState {
+  user: User | null;
+  isAuthenticated: boolean;
+  loading: boolean;
+}
+
 // Create a writable store for authentication state
 const createAuthStore = () => {
-  const { subscribe, set, update } = writable({
-    user: null as User | null,
+  const { subscribe, set, update } = writable<AuthState>({
+    user: null,
     isAuthenticated: false,
     loading: true
   });
@@ -20,7 +27,7 @@ const createAuthStore = () => {
     // Login function
     login: async (email: string, password: string) => {
       try {
-        const response = await fetch('/api/auth/login', {
+        const response = await fetch('http://localhost:8000/api/auth/login', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -45,7 +52,7 @@ const createAuthStore = () => {
 
           return { success: true, user };
         } else {
-          return { success: false, error: data.error };
+          return { success: false, error: data.error || 'Login failed' };
         }
       } catch (error) {
         console.error('Login error:', error);
@@ -56,7 +63,7 @@ const createAuthStore = () => {
     // Register function
     register: async (email: string, password: string) => {
       try {
-        const response = await fetch('/api/auth/register', {
+        const response = await fetch('http://localhost:8000/api/auth/register', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -81,7 +88,7 @@ const createAuthStore = () => {
 
           return { success: true, user };
         } else {
-          return { success: false, error: data.error };
+          return { success: false, error: data.error || 'Registration failed' };
         }
       } catch (error) {
         console.error('Registration error:', error);
@@ -96,7 +103,7 @@ const createAuthStore = () => {
         localStorage.removeItem('accessToken');
         
         // Clear refresh token cookie by calling the logout endpoint
-        await fetch('/api/auth/logout', {
+        await fetch('http://localhost:8000/api/auth/logout', {
           method: 'POST'
         });
         
@@ -133,16 +140,30 @@ const createAuthStore = () => {
 
       try {
         // Verify token by making a request to a protected endpoint
-        // For now, we'll just set the state based on token presence
-        // In a real app, you'd validate the token server-side
-        
-        // Placeholder: assume token is valid
-        // In practice, you'd make a request to validate the token
-        set({
-          user: { id: 'temp-id', email: 'temp@example.com' }, // This would come from token validation
-          isAuthenticated: true,
-          loading: false
+        const response = await fetch('http://localhost:8000/api/auth/verify', {
+          method: 'GET',
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
         });
+
+        if (response.ok) {
+          const userData = await response.json();
+          
+          set({
+            user: userData,
+            isAuthenticated: true,
+            loading: false
+          });
+        } else {
+          // Token is invalid, clear it
+          localStorage.removeItem('accessToken');
+          set({
+            user: null,
+            isAuthenticated: false,
+            loading: false
+          });
+        }
       } catch (error) {
         console.error('Auth check error:', error);
         localStorage.removeItem('accessToken');

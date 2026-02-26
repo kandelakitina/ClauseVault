@@ -20,7 +20,7 @@ This roadmap breaks the ClauseVault project into 4 phases, focusing on deliverin
 - API-03 (API endpoints for user authentication)
 - UI-01, UI-02 (Svelte frontend with responsive design)
 
-**Plans:** 2 plans
+**Plans:** 2/2 plans complete
 
 **Success Criteria:**
 - Users can register and create accounts
