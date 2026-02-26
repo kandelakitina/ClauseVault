@@ -54,6 +54,8 @@ This roadmap breaks the ClauseVault project into 4 phases, focusing on deliverin
 - API-01 (Endpoints for clause CRUD operations)
 - UI-04 (Navigation between features)
 
+**Plans:** 2/2 plans complete
+
 **Success Criteria:**
 - System can store clauses with English and Russian text
 - Clauses can be tagged for categorization
@@ -68,6 +70,10 @@ This roadmap breaks the ClauseVault project into 4 phases, focusing on deliverin
 4. Implement tagging system for clause categorization
 5. Add usage tracking functionality
 6. Implement bilingual display in UI
+
+**Plans:**
+- [ ] 02-01-PLAN.md — Backend clause management API with database schema
+- [ ] 02-02-PLAN.md — Frontend clause browsing UI with navigation
 
 ## Phase 3: Contract Builder Core
 
