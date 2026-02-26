@@ -1,8 +1,10 @@
-import { Application, Context } from "./deps.ts";
+import { Application, Context, Router } from "./deps.ts";
 import config from "./config.ts";
 import authRouter from "./routes/auth.ts";
+import { authMiddleware } from "./middleware/auth.ts";
 
 const app = new Application();
+const apiRouter = new Router();
 
 // Middleware
 app.use(async (ctx: Context, next: () => Promise<unknown>) => {
@@ -24,7 +26,17 @@ app.use(async (ctx: Context, next: () => Promise<unknown>) => {
   }
 });
 
+// Example protected route
+apiRouter.get("/api/protected", authMiddleware, (ctx: Context) => {
+  ctx.response.body = { 
+    message: "This is a protected route",
+    userId: ctx.state.userId
+  };
+});
+
 // Routes
+app.use(apiRouter.routes());
+app.use(apiRouter.allowedMethods());
 app.use(authRouter.routes());
 app.use(authRouter.allowedMethods());
 

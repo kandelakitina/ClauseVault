@@ -25,8 +25,9 @@ export async function authMiddleware(ctx: Context, next: () => Promise<unknown>)
 
     // Continue to next middleware/route
     await next();
-  } catch (error) {
-    console.error("Auth middleware error:", error);
+  } catch (error: unknown) {
+    const err = error as Error;
+    console.error("Auth middleware error:", err);
     ctx.response.status = 500;
     ctx.response.body = { error: "Internal server error" };
   }
